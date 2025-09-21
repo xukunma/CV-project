@@ -30,7 +30,6 @@ source('parsing_functions.R')
 position_data <- read_csv('positions.csv')
 ```
 
-
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
 if(PDF_EXPORT){
@@ -43,12 +42,9 @@ if(PDF_EXPORT){
 }
 ```
 
+# Aside
 
-Aside
-================================================================================
-
-
-![logo](beta_dist.png){width=100%}
+![logo](beta_dist.png){width="100%"}
 
 ```{r}
 # When in export mode the little dots are unaligned, so fix that. 
@@ -59,20 +55,15 @@ if(PDF_EXPORT){
 }
 ```
 
-Contact {#contact}
---------------------------------------------------------------------------------
+## Contact {#contact}
 
+-   <i class="fa fa-envelope"></i> [nick.strayer\@gmail.com](mailto:nick.strayer@gmail.com){.email}
+-   <i class="fa fa-twitter"></i> NicholasStrayer
+-   <i class="fa fa-github"></i> github.com/nstrayer
+-   <i class="fa fa-link"></i> [nickstrayer.me](http://nickstrayer.me/)
+-   <i class="fa fa-phone"></i> (734) 645-0110
 
-- <i class="fa fa-envelope"></i> nick.strayer@gmail.com
-- <i class="fa fa-twitter"></i> NicholasStrayer
-- <i class="fa fa-github"></i> github.com/nstrayer
-- <i class="fa fa-link"></i> [nickstrayer.me](http://nickstrayer.me/)
-- <i class="fa fa-phone"></i> (734) 645-0110
-
-
-
-Language Skills {#skills}
---------------------------------------------------------------------------------
+## Language Skills {#skills}
 
 ```{r}
 skills <- tribble(
@@ -89,28 +80,17 @@ skills <- tribble(
 build_skill_bars(skills)
 ```
 
+## Disclaimer {#disclaimer}
 
-
-
-
-Disclaimer {#disclaimer}
---------------------------------------------------------------------------------
-
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown).
 
 The source code is available at [github.com/nstrayer/cv](https://github.com/nstrayer/cv).
 
 Last updated on `r Sys.Date()`.
 
+# Main
 
-
-
-Main
-================================================================================
-
-Nick Strayer {#title}
---------------------------------------------------------------------------------
-
+## Xukun Ma {#title}
 
 ```{r}
 intro_text <- "I have made [visualizations viewed by hundreds of thousands of people](https://www.nytimes.com/interactive/2016/08/26/us/college-student-migration.html), [sped up query times for 25 terabytes of data by an average of 4,800 times](https://livefreeordichotomize.com/2019/06/04/using_awk_and_r_to_parse_25tb/), and built [packages for R](https://github.com/nstrayer/shinysense) that let you [do magic](http://nickstrayer.me/dataDayTexas/).
@@ -121,56 +101,41 @@ Currently searching for a data science position that allows me to build tools us
 cat(sanitize_links(intro_text))
 ```
 
-
-
-Education {data-icon=graduation-cap data-concise=true}
---------------------------------------------------------------------------------
+## Education {data-icon="graduation-cap" data-concise="true"}
 
 ```{r}
 print_section(position_data, 'education')
 ```
 
-
-
-Research Experience {data-icon=laptop}
---------------------------------------------------------------------------------
+## Research Experience {data-icon="laptop"}
 
 ```{r}
 print_section(position_data, 'research_positions')
 ```
 
-
-
-Industry Experience {data-icon=suitcase}
---------------------------------------------------------------------------------
+## Industry Experience {data-icon="suitcase"}
 
 ::: aside
-I have worked in a variety of roles ranging from journalist to software engineer to data scientist. I like collaborative environments where I can learn from my peers. 
+I have worked in a variety of roles ranging from journalist to software engineer to data scientist. I like collaborative environments where I can learn from my peers.
 :::
 
 ```{r}
 print_section(position_data, 'industry_positions')
 ```
 
-<br>
-<br>
-<br>
+<br> <br> <br>
 
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
+## Teaching Experience {data-icon="chalkboard-teacher"}
 
 ::: aside
-I am passionate about education. I believe that no topic is too complex if the teacher is empathetic and willing to think about new methods of approaching task. 
+I am passionate about education. I believe that no topic is too complex if the teacher is empathetic and willing to think about new methods of approaching task.
 :::
 
 ```{r}
 print_section(position_data, 'teaching_positions')
 ```
 
-
-Selected Data Science Writing {data-icon=chart-line}
---------------------------------------------------------------------------------
-
+## Selected Data Science Writing {data-icon="chart-line"}
 
 ::: aside
 I regularly blog about data science and visualization on my blog [LiveFreeOrDichotomize.](https://livefreeordichotomize.com/)
@@ -180,35 +145,23 @@ I regularly blog about data science and visualization on my blog [LiveFreeOrDich
 print_section(position_data, 'data_science_writings')
 ```
 
-
-
-Selected Press (About)  {data-icon=newspaper}
---------------------------------------------------------------------------------
+## Selected Press (About) {data-icon="newspaper"}
 
 ```{r}
 print_section(position_data, 'about_me_press')
 ```
 
-
-
-Selected Press (By)  {data-icon=newspaper}
---------------------------------------------------------------------------------
+## Selected Press (By) {data-icon="newspaper"}
 
 ```{r}
 print_section(position_data, 'by_me_press')
 ```
 
-
-
-
-Selected Publications, Posters, and Talks {data-icon=book}
---------------------------------------------------------------------------------
+## Selected Publications, Posters, and Talks {data-icon="book"}
 
 ```{r}
 print_section(position_data, 'academic_articles')
 ```
-
-
 
 ```{r}
 if(PDF_EXPORT){
@@ -227,5 +180,3 @@ Links {data-icon=link}
   })
 }
 ```
-
-
